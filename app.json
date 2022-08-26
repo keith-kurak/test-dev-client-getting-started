@@ -24,10 +24,28 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
-      }
+      },
+      "permissions": [
+        "android.permission.RECORD_AUDIO"
+      ],
+      "package": "com.keithkurak.testdevclientgettingstarted"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "@react-native-voice/voice",
+        {
+          "microphonePermission": "Allow $(PRODUCT_NAME) to access your microphone",
+          "speechRecogntionPermission": "Allow $(PRODUCT_NAME) to securely recognize user speech"
+        }
+      ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "3bc10cde-4a8d-41bd-8bae-bed056a99c64"
+      }
     }
   }
 }
